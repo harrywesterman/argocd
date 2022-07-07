@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: webtrees
+  namespace: webtrees
+spec:
+  project: default
+  source:
+    chart: webtrees
+    repoURL: https://github.com/harrywesterman/charts.git
+    targetRevision: 1.16.1
+    helm:
+      releaseName: webtrees
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: webtrees
