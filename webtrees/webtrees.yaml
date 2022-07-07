@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    chart: webtrees
+    chart: charts/charts/stable/webtrees
     repoURL: https://github.com/harrywesterman/charts.git
     targetRevision: 1.16.1
     helm:
